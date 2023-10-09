@@ -20,3 +20,8 @@ In Python, **setup.py** is a module used to build and distribute Python packages
 * Also create a folder named `src`. Inside that, create a `__init__.py` file. Entire project development will be made inside the `src` folder
 * Add `-e .` at the end of `requirements.txt` file. This will trigger the `setup.py` file.
 * Now whenever we run the command `pip install -r requirements.txt`, the setup file will get triggered and the package will be built.
+
+## Project Structure
+* In the `src` folder, create a subfolder `components`. In that, create `__init__.py`, `data_ingestion.py`, `data_transformation.py`, and `model_trainer.py` files.
+* Create another subfolder `pipeline` and create `__init__.py`, `train_pipeline.py`, and `predict_pipeline.py` files.
+* Also create `logger.py`, `exception.py`, and `utils.py` files.
