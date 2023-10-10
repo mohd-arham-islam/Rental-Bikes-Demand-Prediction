@@ -1,19 +1,15 @@
-import sys
+import logging
+import os
+from datetime import datetime
 
-def errorMessageDetail(error, errorDetail:sys):
-    _, _, exc_tb = errorDetail.exc_info()
-    fileName = exc_tb.tb_frame.f_code.co_filename
-    lineNumber = exc_tb.tb_lineno
-    errorMessage = f'''Error occured in python file {fileName}, 
-    line number {lineNumber}. Error Message: {str(error)}    
-    '''
+LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
+logsPath=os.path.join(os.getcwd(),"logs",LOG_FILE)
+os.makedirs(logsPath,exist_ok=True)
 
-    return errorMessage
+LOG_FILE_PATH=os.path.join(logsPath,LOG_FILE)
 
-class customException(Exception):
-    def __init__(self, errorMessage, errorDetail:sys):
-        super.__init__(errorMessage)
-        self.errorMessage = errorMessageDetail(errorMessage, errorDetail)
-
-    def __str__(self):
-        return self.errorMessage
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO,
+)
