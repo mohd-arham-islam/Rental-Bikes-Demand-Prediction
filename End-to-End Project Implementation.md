@@ -31,3 +31,6 @@ In a machine learning project, the `exception.py`` file and custom exceptions ar
 
 ### Logger File
 In a machine learning project, a logger file is crucial for effective monitoring, troubleshooting, and maintaining project health. It records key information, such as training progress, validation metrics, errors, and warnings, allowing developers and data scientists to track model performance, identify issues, and make informed improvements. Additionally, logging provides a historical record of project activities, aiding in reproducibility, collaboration, and auditing, which are vital aspects of machine learning project management.
+
+## Setup Jupyter Notebook
+Create a folder named `notebook` that has a subfolder `data`. The dataset will be placed in this folder. In the parent folder, create `.ipynb` files for EDA and Model Training.

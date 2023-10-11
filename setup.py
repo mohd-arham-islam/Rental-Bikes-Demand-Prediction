@@ -19,7 +19,7 @@ def getRequirements(filePath):
     return requirements
 
 setup(
-    name='Student Performance',
+    name='Rental Bikes Demand Prediction',
     version='1.0',
     author='Arham',
     packages=find_packages(),
