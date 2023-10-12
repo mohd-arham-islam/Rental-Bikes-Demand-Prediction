@@ -34,3 +34,6 @@ In a machine learning project, a logger file is crucial for effective monitoring
 
 ## Setup Jupyter Notebook
 Create a folder named `notebook` that has a subfolder `data`. The dataset will be placed in this folder. In the parent folder, create `.ipynb` files for EDA and Model Training.
+
+## Data Ingestion
+In an end-to-end machine learning (ML) project, the data_ingestion.py script or module typically plays a crucial role in the data preprocessing and data acquisition stages. Its primary purpose is to load, clean, and prepare the raw data for use in the machine learning pipeline.
