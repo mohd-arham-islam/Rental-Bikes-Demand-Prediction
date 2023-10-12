@@ -26,6 +26,8 @@ In Python, **setup.py** is a module used to build and distribute Python packages
 * Create another subfolder `pipeline` and create `__init__.py`, `train_pipeline.py`, and `predict_pipeline.py` files.
 * Also create `logger.py`, `exception.py`, and `utils.py` files.
 
+The reason why we use such a structure is to ensure readability and debugging. Also code blocks can be reused in different projects. It also facilitates collaboration.
+
 ### Exception File
 In a machine learning project, the `exception.py`` file and custom exceptions are essential for efficient error handling and code maintainability. Custom exceptions provide clear, descriptive error messages that aid in debugging and make the code more readable, while separating them into a dedicated file enhances modularity. This practice streamlines error management and ensures that issues are handled gracefully, improving the overall reliability of the project.
 
@@ -37,3 +39,6 @@ Create a folder named `notebook` that has a subfolder `data`. The dataset will b
 
 ## Data Ingestion
 In an end-to-end machine learning (ML) project, the data_ingestion.py script or module typically plays a crucial role in the data preprocessing and data acquisition stages. Its primary purpose is to load, clean, and prepare the raw data for use in the machine learning pipeline.
+
+## Data Transformation
+In a machine learning project, the "data transformation.py" file plays a pivotal role in shaping the quality and effectiveness of the model. It is essential for preparing and structuring the raw data into a format that is suitable for training and prediction. Data transformation encompasses tasks like cleaning, normalization, encoding categorical variables, handling missing values, feature engineering, and more.
