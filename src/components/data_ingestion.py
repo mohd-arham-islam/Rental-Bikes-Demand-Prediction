@@ -1,5 +1,7 @@
 import os
 import sys
+
+from src.components.data_transformation import DataTransformation
 from src.exception import customException
 from src.logger import logging
 import pandas as pd
@@ -47,4 +49,7 @@ class DataIngestion:
         
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.initiateDataIngestion()
+    trainDataPath, testDataPath = obj.initiateDataIngestion()
+
+    transformer = DataTransformation()
+    transformer.initiateTransformation(trainDataPath, testDataPath)
