@@ -42,3 +42,11 @@ In an end-to-end machine learning (ML) project, the data_ingestion.py script or 
 
 ## Data Transformation
 In a machine learning project, the "data transformation.py" file plays a pivotal role in shaping the quality and effectiveness of the model. It is essential for preparing and structuring the raw data into a format that is suitable for training and prediction. Data transformation encompasses tasks like cleaning, normalization, encoding categorical variables, handling missing values, feature engineering, and more.
+
+## Model Trainer
+The model is trained inside this file. This file has a class that returns the score of the best model. The object of this class is called in the data ingestion script.
+
+Infact the data transformation class object is also run inside the ingestion script.
+
+## Predict Pipeline
+All the things done inside the flask app method will be done here. For example accepting form data, processing it, etc.

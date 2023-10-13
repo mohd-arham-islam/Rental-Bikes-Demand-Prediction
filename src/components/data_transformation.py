@@ -12,6 +12,9 @@ from src.logger import logging
 # class DataTransformationConfig:
 #     preprocessorObjFilePath = os.path.join('artifacts', 'preprocessor.pkl')
 class Processor:
+    def __init__(self) -> None:
+        pass
+    
     def encode(self, x):
         day = {
             'Monday': 1,
