@@ -11,6 +11,8 @@ from sklearn.ensemble import (
 from sklearn.metrics import r2_score
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
+from sklearn.model_selection import GridSearchCV
+
 
 from src.exception import customException
 from src.logger import logging
@@ -60,17 +62,33 @@ class ModelTrainer:
                 raise customException("No best model found", sys)
             
             logging.info("Best model found")
+            logging.info("Initiating Hyperparameter tuning")
 
-            bestModel.fit(X_train, y_train)
-            predictions = bestModel.predict(X_test)
-            score = r2_score(y_test, predictions)
+            params = {
+                'objective': ['reg:squarederror'],
+                'colsample_bytree': [0.8],
+                'learning_rate': [0.1],
+                'max_depth': [3, 5, 7],
+                'alpha': [10],
+                'n_estimators': [100, 200, 300]
+            }
+
+            # From the logs, I know the best model is XGBoost Regressor. I can also write a general script.
+            gridSearch = GridSearchCV(estimator=bestModel, param_grid=params, scoring='neg_mean_squared_error', cv=5)
+            gridSearch.fit(X_train, y_train)
+            # bestParams = gridSearch.best_params_
+            bestModelTuned = gridSearch.best_estimator_
+
+            logging.info("Completed tuning. Now calculating the score")
+            y_test_pred = bestModelTuned.predict(X_test)
+            score = r2_score(y_test, y_test_pred)
 
             saveObject(
                 filePath=self.trainerConfig.modelFilePath,
                 object=bestModel
             )
 
-            logging.info(f'Best Model is {bestModel} with R2 score of {score}')
+            logging.info(f'Best Model is {bestModel} with R2 score of {round(score, 3)}')
             return {
                 'Model': bestModelName,
                 'Score': score
