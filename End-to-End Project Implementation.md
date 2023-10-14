@@ -50,3 +50,14 @@ Infact the data transformation class object is also run inside the ingestion scr
 
 ## Predict Pipeline
 All the things done inside the flask app method will be done here. For example accepting form data, processing it, etc.
+
+## Deployment to AWS Elastic Beanstalk
+AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS. You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, and auto-scaling to application health monitoring. 
+
+At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
+
+| Service                  | Pros                                                      | Cons                                                   |
+|--------------------------|-----------------------------------------------------------|--------------------------------------------------------|
+| **AWS Elastic Beanstalk** | - Easy to use and set up.  - Auto-scales your application. - Handles load balancing, monitoring, and auto-recovery. - Supports a variety of programming languages including Python. | - Limited control over the underlying infrastructure. - Limited customizability, especially for highly complex applications. - Pricing can be higher than other options for long-term use. |
+| **Amazon EC2**           | - Full control over the virtual server instance. - Can be customized to fit the specific requirements of your Flask app and ML project. - Scalable, and can be used for various other applications. | - Requires manual configuration for load balancing, scaling, and monitoring. - Maintenance, patching, and updates are your responsibility. - You need to manage the entire infrastructure, which can be complex. |
+| **AWS Lambda**           | - Serverless, so you don't need to worry about infrastructure. - Cost-effective as you only pay for the compute time used. - Scales automatically based on traffic. - Well-suited for lightweight Flask apps and smaller ML workloads. | - Limited to 15 minutes of execution time per request. - Limited to 3 GB of memory per execution. - Cold start latency can be an issue. - May require additional services for database and long-running tasks. |
