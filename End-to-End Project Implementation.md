@@ -13,6 +13,8 @@
     * `git push -u origin main`
 * If making any changes in GitHub directly, make sure to use the `git pull` command to make sure that the IDE is in sync with GitHub.
 * Use `git add .` to add all the changed/modified files.
+* To add and commit in command, set an alias using the command `git config --global alias.add-commit '!git add . && git commit -m'`
+* To unset the alias, use the command `git config --global --unset alias.<your_alias>`
 
 ## setup.py & requirements.txt
 In Python, **setup.py** is a module used to build and distribute Python packages. It typically contains information about the package, such as its name, version, and dependencies, as well as instructions for building and installing the package. It basically allows us to create our machine learning project as a package.
@@ -68,11 +70,13 @@ At the same time, you retain full control over the AWS resources powering your a
 **Steps Involved**
 
 * Create a folder named `.ebextensions` and create a `python.config` file. 
+
 Write the following code: 
+
 `
 option_settings:
     "aws:elasticbeanstalk:container:python":
     WSGIPath: application:application
 `
 
-* Create an application.py file which is basically a copy of app.py and change the name of flask app to the same.
+* Create an `application.py`` file which is basically a copy of `app.py` and change the name of flask app to the same.
