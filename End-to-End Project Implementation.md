@@ -73,10 +73,9 @@ At the same time, you retain full control over the AWS resources powering your a
 
 Write the following code: 
 
-`
-option_settings:
-    "aws:elasticbeanstalk:container:python":
-    WSGIPath: application:application
-`
+`option_settings:`
+`    "aws:elasticbeanstalk:container:python":`
+`    WSGIPath: application:application`
+
 
 * Create an `application.py`` file which is basically a copy of `app.py` and change the name of flask app to the same.
