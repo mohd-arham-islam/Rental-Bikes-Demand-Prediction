@@ -80,3 +80,8 @@ option_settings:
 ```
 
 * Create an `application.py` file which is basically a copy of `app.py` and change the name of flask app to the same.
+
+![Flowchart of how the deployment works](image-1.png)
+
+### Errors Faced
+Got the following error: `The instance profile aws-elasticbeanstalk-ec2-role associated with the environment does not exist.`
