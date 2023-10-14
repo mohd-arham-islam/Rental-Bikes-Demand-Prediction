@@ -56,8 +56,21 @@ AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web ap
 
 At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
 
+**Comparison of different AWS services for deployment**
+
 | Service                  | Pros                                                      | Cons                                                   |
 |--------------------------|-----------------------------------------------------------|--------------------------------------------------------|
 | **AWS Elastic Beanstalk** | - Easy to use and set up.  - Auto-scales your application. - Handles load balancing, monitoring, and auto-recovery. - Supports a variety of programming languages including Python. | - Limited control over the underlying infrastructure. - Limited customizability, especially for highly complex applications. - Pricing can be higher than other options for long-term use. |
 | **Amazon EC2**           | - Full control over the virtual server instance. - Can be customized to fit the specific requirements of your Flask app and ML project. - Scalable, and can be used for various other applications. | - Requires manual configuration for load balancing, scaling, and monitoring. - Maintenance, patching, and updates are your responsibility. - You need to manage the entire infrastructure, which can be complex. |
 | **AWS Lambda**           | - Serverless, so you don't need to worry about infrastructure. - Cost-effective as you only pay for the compute time used. - Scales automatically based on traffic. - Well-suited for lightweight Flask apps and smaller ML workloads. | - Limited to 15 minutes of execution time per request. - Limited to 3 GB of memory per execution. - Cold start latency can be an issue. - May require additional services for database and long-running tasks. |
+
+
+**Steps Involved**
+
+* Create a folder named `.ebextensions` and create a `python.config` file. 
+* Write the following code: 
+`option_settings:
+    "aws:elasticbeanstalk:container:python":
+    WSGIPath: application:application`
+
+* Create an application.py file which is basically a copy of app.py and change the name of flask app to the same.
