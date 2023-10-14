@@ -85,3 +85,6 @@ option_settings:
 
 ### Errors Faced
 Got the following error: `The instance profile aws-elasticbeanstalk-ec2-role associated with the environment does not exist.`
+
+Refer to the following url: https://stackoverflow.com/questions/76626720/the-instance-profile-associated-with-the-environment-does-not-exist
+

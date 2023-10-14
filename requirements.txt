@@ -5,5 +5,4 @@ numpy
 scikit-learn
 xgboost
 dill
-flask
-# -e .
+Flask
