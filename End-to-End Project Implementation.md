@@ -79,5 +79,4 @@ option_settings:
      WSGIPath: application:application
 ```
 
-
-* Create an `application.py`` file which is basically a copy of `app.py` and change the name of flask app to the same.
+* Create an `application.py` file which is basically a copy of `app.py` and change the name of flask app to the same.
