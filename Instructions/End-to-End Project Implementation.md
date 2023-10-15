@@ -53,8 +53,9 @@ Infact the data transformation class object is also run inside the ingestion scr
 ## Predict Pipeline
 All the things done inside the flask app method will be done here. For example accepting form data, processing it, etc.
 
-## Deployment to AWS Elastic Beanstalk
+## Deployment to AWS Elastic Beanstalk (Failed)
 AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS. You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, and auto-scaling to application health monitoring. 
+
 
 At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
 
@@ -83,8 +84,13 @@ option_settings:
 
 ![Flowchart of how the deployment works](image-1.png)
 
+CodePipeline is CD pipeline. It detects any changes made in the GitHub repo and then pushes the code to EB. 
+
 ### Errors Faced
 Got the following error: `The instance profile aws-elasticbeanstalk-ec2-role associated with the environment does not exist.`
 
 Refer to the following url: https://stackoverflow.com/questions/76626720/the-instance-profile-associated-with-the-environment-does-not-exist
 
+## Deployment to Azure
+* Create new Web App in Azure Cloud.
+* Enable the GitHub Action option.
