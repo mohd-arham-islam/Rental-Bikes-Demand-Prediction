@@ -1,6 +1,6 @@
 # Rental Bikes Demand Prediction
 
-This is an end to end Machine Learning project. This project aims to predict the demand for rental bikes using a comprehensive dataset that includes hourly bike rental counts and corresponding weather conditions. The goal is to employ regression analysis techniques to accurately forecast the required number of bikes for each hour, thus enhancing the user experience and mobility convenience provided by rental bike providers. I have used modular coding in this project and have tried incorporating industry-level best practices such as file versioning, logging, and a well-defined folder structure.
+This is an end to end Machine Learning project. This project aims to predict the demand for rental bikes using a comprehensive dataset that includes hourly bike rental counts and corresponding weather conditions. The goal is to employ regression analysis techniques to accurately forecast the required number of bikes for each hour, thus enhancing the user experience and mobility convenience provided by rental bike providers. I have used modular coding in this project and have tried incorporating industry-level best practices such as file versioning, logging, and a well-defined folder structure. At the end, I deployed the app to Azure using GitHub Actions.
 
 ![image](https://github.com/mohd-arham-islam/Bike-Share/assets/111959286/69a3ccb3-f46f-4d64-af80-b67173db4264)
 
@@ -28,6 +28,7 @@ To provide easy access to the trained model's predictions, a Flask application w
 ## Model Deployment using Azure 
 I have deployed the application on Azure Cloud using GitHub actions, which is a crucial aspect of a Continuous Deployment (CD) pipeline. Any changes made in the repository get automatically reflected in the web app.
 
+P.S. I've stopped the app to avoid getting charged. If you want to test the app, then please reach out to me at https://www.linkedin.com/in/mohd-arham-islam/
 
 By leveraging these insights, feature engineering techniques, and advanced regression models, this project offers a comprehensive solution for predicting bike rental demand, enhancing the overall user experience, and enabling more efficient resource allocation for rental bike providers.
 
