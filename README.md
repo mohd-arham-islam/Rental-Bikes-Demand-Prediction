@@ -30,5 +30,8 @@ I have deployed the application on Azure Cloud using GitHub actions, which is a 
 
 P.S. I've stopped the app to avoid getting charged. If you want to test the app, then please reach out to me at https://www.linkedin.com/in/mohd-arham-islam/
 
+### Role of GitHub Actions in deployment
+GitHub Actions is a powerful tool that can be used to automate a wide variety of tasks in the CI/CD pipeline. It is a popular choice for teams of all sizes, and it is well-integrated with Azure. GitHub Actions can be used to automate the deployment process. When we push changes to your GitHub repository, GitHub Actions will automatically trigger a workflow that will build and package our app, and then deploy it to Azure.
+
 By leveraging these insights, feature engineering techniques, and advanced regression models, this project offers a comprehensive solution for predicting bike rental demand, enhancing the overall user experience, and enabling more efficient resource allocation for rental bike providers.
 
